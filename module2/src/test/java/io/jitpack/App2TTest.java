@@ -7,7 +7,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest 
+public class App2TTest
     extends TestCase
 {
     /**
@@ -15,7 +15,7 @@ public class AppTest
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName )
+    public App2TTest(String testName )
     {
         super( testName );
     }
@@ -25,7 +25,7 @@ public class AppTest
      */
     public static Test suite()
     {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( App2TTest.class );
     }
 
     /**
@@ -34,5 +34,11 @@ public class AppTest
     public void testApp()
     {
         assertTrue( true );
+    }
+
+    public void sumTest() {
+        App2T t = new App2T();
+        assertEquals(4, t.sum(2, 2));
+
     }
 }
