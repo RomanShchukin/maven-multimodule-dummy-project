@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/jacoco.xml'
-    goals: 'package'
+    goals: 'package verify'
 
 - task: PublishCodeCoverageResults@1
   inputs:
