@@ -21,7 +21,7 @@ steps:
     mavenVersionOption: 'Default'
     codeCoverageToolOption: 'None'
     publishJUnitResults: true
-    testResultsFiles: '**/jacoco.xml'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean verify'
 
 - task: PublishCodeCoverageResults@1
