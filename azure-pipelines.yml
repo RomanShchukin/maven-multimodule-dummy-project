@@ -27,5 +27,5 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/code-coverage/target/site/jacoco-aggregate/jacoco.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/code-coverage/target/site/jacoco-aggregate'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate/jacoco.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate'
