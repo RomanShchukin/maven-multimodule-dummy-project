@@ -27,4 +27,5 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
     codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/maven-modular/coverage/target/site/jacoco-aggregate/jacoco.xml'
+    summaryFileLocation: '$(System.DefaultWorkingDirectory)/code-coverage/target/site/jacoco-aggregate/jacoco.xml'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/code-coverage/target/site/jacoco-aggregate'
