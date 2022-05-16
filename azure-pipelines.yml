@@ -14,12 +14,15 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
+    options: '-U -B -ntp'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
+    mavenVersionOption: 'Default'
+    codeCoverageToolOption: 'None'
     publishJUnitResults: true
     testResultsFiles: '**/jacoco.xml'
-    goals: 'package verify'
+    goals: 'clean verify'
 
 - task: PublishCodeCoverageResults@1
   inputs:
