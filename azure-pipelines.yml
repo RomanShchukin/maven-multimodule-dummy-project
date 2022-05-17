@@ -19,7 +19,7 @@ steps:
     jdkVersionOption: '1.11'
     jdkArchitectureOption: 'x64'
     mavenVersionOption: 'Default'
-    codeCoverageToolOption: 'jacoco'
+    codeCoverageToolOption: 'None'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'clean verify'
