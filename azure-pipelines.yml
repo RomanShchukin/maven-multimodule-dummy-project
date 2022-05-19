@@ -13,7 +13,7 @@ steps:
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean'
-    options: '-U -B -ntp'
+    options: '-U -B'
     publishJUnitResults: false
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
