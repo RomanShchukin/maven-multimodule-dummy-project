@@ -9,11 +9,6 @@ trigger:
 pool: default
 
 steps:
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -23,8 +18,6 @@ steps:
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
     codeCoverageSourceDirectories: 'module1/src, module2/src'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
