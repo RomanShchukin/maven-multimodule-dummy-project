@@ -14,10 +14,12 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'clean verify'
     options: '-U -B'
-    publishJUnitResults: false
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
     codeCoverageSourceDirectories: 'module1/src,module2/src'
+    javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
