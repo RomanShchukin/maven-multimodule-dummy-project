@@ -24,8 +24,8 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: PublishCodeCoverageResults@1
-  inputs:
-    codeCoverageTool: 'JaCoCo'
-    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate/jacoco.xml'
-    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate'
+#- task: PublishCodeCoverageResults@1
+#  inputs:
+#    codeCoverageTool: 'JaCoCo'
+#    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate/jacoco.xml'
+#    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate'
