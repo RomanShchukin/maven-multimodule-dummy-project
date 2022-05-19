@@ -17,7 +17,7 @@ steps:
     publishJUnitResults: false
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
-    codeCoverageSourceDirectories: 'module1/src, module2/src'
+    codeCoverageSourceDirectories: 'module1/src,module2/src'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
     mavenAuthenticateFeed: false
