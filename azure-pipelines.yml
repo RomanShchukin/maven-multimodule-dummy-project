@@ -15,8 +15,7 @@ steps:
     mavenPomFile: 'pom.xml'
     goals: 'clean'
     options: '-U -B -ntp'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    publishJUnitResults: false
     codeCoverageToolOption: 'JaCoCo'
     codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
     codeCoverageSourceDirectories: 'module1/src, module2/src'
