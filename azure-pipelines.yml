@@ -12,7 +12,7 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'clean'
+    goals: 'clean verify'
     options: '-U -B'
     publishJUnitResults: false
     codeCoverageToolOption: 'JaCoCo'
