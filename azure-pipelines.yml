@@ -18,7 +18,7 @@ steps:
     extraProperties: |
       sonar.projectKey=RomanShchukinTest_1
       sonar.projectName=RomanShchukinTest_1
-- task: Maven@3.209.2
+- task: Maven@3.209.0
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean verify'
@@ -28,8 +28,8 @@ steps:
     codeCoverageToolOption: 'JaCoCo'
 #    codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
 #    codeCoverageSourceDirectories: 'module1/src,module2/src'
-    codeCoverageClassFilesDirectories: 'module1/target/classes'
-    codeCoverageSourceDirectories: 'module1/src'
+#    codeCoverageClassFilesDirectories: 'module1/target/classes'
+#    codeCoverageSourceDirectories: 'module1/src'
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenOptions: '-Xmx3072m'
