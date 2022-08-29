@@ -12,7 +12,7 @@ pool:
 steps:
 - task: Maven@3.209.0
   inputs:
-    mavenPomFile: 'DeepSpace/pom.xml'
+    mavenPomFile: 'pom.xml'
     options: '-Dmaven.wagon.http.pool=false'
     testResultsFiles: '**/TEST-*.xml'
     codeCoverageToolOption: Cobertura
