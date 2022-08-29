@@ -18,7 +18,7 @@ steps:
     extraProperties: |
       sonar.projectKey=RomanShchukinTest_2
       sonar.projectName=RomanShchukinTest_2
-- task: Maven@3.209.0
+- task: Maven@3.209.4
   inputs:
     mavenPomFile: 'pom.xml'
     goals: 'clean verify'
