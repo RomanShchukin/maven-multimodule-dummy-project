@@ -10,6 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQubeConnection'
+    scannerMode: 'Other'
+    organization: 'romanshchukintest'
+    extraProperties: |
+      sonar.projectKey=RomanShchukinTest_1
+      sonar.projectName=RomanShchukinTest_1
 - task: Maven@3.209.2
   inputs:
     mavenPomFile: 'pom.xml'
