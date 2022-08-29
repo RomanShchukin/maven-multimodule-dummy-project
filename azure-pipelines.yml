@@ -4,30 +4,21 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- main
 
-pool: default
+pool:
+  vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: Maven@3.209.0
   inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'clean verify'
-    options: '-U -B'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: 'JaCoCo'
-    codeCoverageClassFilesDirectories: 'module1/target/classes,module2/target/classes'
-    codeCoverageSourceDirectories: 'module1/src,module2/src'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenOptions: '-Xmx3072m'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
-
-#- task: PublishCodeCoverageResults@1
-#  inputs:
-#    codeCoverageTool: 'JaCoCo'
-#    summaryFileLocation: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate/jacoco.xml'
-#    reportDirectory: '$(System.DefaultWorkingDirectory)/coverage/target/site/jacoco-aggregate'
+    mavenPomFile: 'DeepSpace/pom.xml'
+    options: '-Dmaven.wagon.http.pool=false'
+    testResultsFiles: '**/TEST-*.xml'
+    codeCoverageToolOption: Cobertura
+    codeCoverageFailIfEmpty: true
+    jdkVersionOption: 1.8
+    mavenAuthenticateFeed: true
+    checkStyleRunAnalysis: true
+    pmdRunAnalysis: true
+    findBugsRunAnalysis: true
